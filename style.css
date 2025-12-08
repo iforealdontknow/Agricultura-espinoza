@@ -1,0 +1,121 @@
+:root {
+    /* PALETA NUEVA: VERDE + BLANCO, TEXTO OSCURO */
+    --bg: #e5f6e9;      /* verde suave más marcado */
+    --bg-alt: #dbf2e0;
+    --bg-soft: #c3e8cf;
+    --accent: #16a34a;
+    --accent-soft: rgba(22, 163, 74, 0.12);
+    --accent-strong: #22c55e;
+    --text: #0f172a;      /* casi negro */
+    --muted: #475569;     /* gris legible */
+    --border: rgba(148, 163, 184, 0.55);
+    --danger: #e11d48;
+    --radius-lg: 24px;
+    --radius-md: 18px;
+    --shadow-soft: 0 24px 80px rgba(15, 23, 42, 0.18);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 20px; /* antes 18px */
+    background:
+        radial-gradient(circle at top left, rgba(34, 197, 94, 0.26), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.16), transparent 45%),
+        var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Layout base */
+
+.container {
+    width: 100%;
+    max-width: 1600px;      /* bien ancho */
+    margin: 0 auto;
+    padding: 0 0.75rem;
+}
+
+.section {
+    padding: 5.5rem 0;
+}
+
+.section-alt {
+    background: linear-gradient(180deg, var(--bg-alt), transparent 90%);
+}
+
+.section-contrast {
+    background: linear-gradient(135deg, #d1fae5, #ecfdf3);
+}
+
+.section-small {
+    padding: 3rem 0;
+}
+
+.section-header {
+    max-width: 640px;
+    margin-bottom: 2.75rem;
+}
+
+.section-header.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.overline {
+    font-size: 0.9rem; /* más grande */
+    letter-spacing: 0.14em; /* un poco menos para leer mejor */
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #166534; /* verde más oscuro */
+    margin-bottom: 0.75rem;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    color: var(--text);
+}
+
+h1 {
+    font-size: clamp(3.2rem, 5vw, 4.1rem); /* más grande */
+    line-height: 1.03;
+    margin-bottom: 1.6rem;
+}
+
+
+h2 {
+    font-size: clamp(2rem, 3.1vw, 2.5rem);
+    margin-bottom: 0.75rem;
+}
+
+h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.6rem;
+}
+
+p {
+    font-size: 1.02rem;
+    color: var(--muted);
+}
