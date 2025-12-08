@@ -119,3 +119,133 @@ p {
     font-size: 1.02rem;
     color: var(--muted);
 }
+
+
+/* Header / Nav */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background: #ffffff; /* navbar blanco */
+    backdrop-filter: none;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  /* logo a la izq */
+    padding: 0.9rem 0.75rem;
+    position: relative;
+}
+
+/* Logo + imagen */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-img {
+    height: 64px;   /* más grande para que luzca */
+    width: auto;
+    display: block;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.9rem;
+    font-size: 0.95rem;
+    margin-left: auto;           /* empuja el menú hacia la derecha */
+}
+
+.main-nav a {
+    position: relative;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: none;
+    letter-spacing: 0.04em;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    transition: color 0.2s ease,
+                background-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    background: radial-gradient(circle at top left,
+                rgba(34, 197, 94, 0.18),
+                transparent 70%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.main-nav a:hover {
+    color: #15803d;
+    background: rgba(22, 163, 74, 0.08);
+    box-shadow: 0 0 12px rgba(34, 197, 94, 0.28);
+}
+
+.main-nav a:hover::after {
+    opacity: 1;
+}
+
+.header-cta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.header-cta span {
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+}
+
+/* Botón menú móvil */
+
+.nav-toggle {
+    display: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.7);
+    background: #ffffff;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nav-toggle-lines {
+    width: 18px;
+    height: 14px;
+    position: relative;
+}
+
+.nav-toggle-lines span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--text);
+    border-radius: 999px;
+    transition: transform 0.2s ease, opacity 0.2s ease, top 0.2s ease, bottom 0.2s ease;
+}
+
+.nav-toggle-lines span:nth-child(1) {
+    top: 0;
+}
+
+.nav-toggle-lines span:nth-child(2) {
+    top: 6px;
+}
