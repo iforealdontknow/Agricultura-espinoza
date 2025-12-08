@@ -573,3 +573,128 @@ body.nav-open .nav-toggle-lines span:nth-child(3) {
     color: var(--accent);
     font-weight: 600;
 }
+
+
+.hero-footer-row small {
+    font-size: 0.86rem;
+}
+
+.hero-footer-tag {
+    padding: 0.28rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.5);
+    background: #ffffff;
+}
+
+/* SECCIONES PRINCIPALES */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.6rem;
+}
+
+.feature-card {
+    border-radius: var(--radius-md);
+    padding: 1.6rem 1.5rem;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.05);
+}
+
+.feature-card p {
+    font-size: 0.98rem;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.8rem;
+}
+
+.comparison-column {
+    border-radius: var(--radius-md);
+    padding: 1.6rem 1.6rem 1.8rem;
+    background: #ffffff;
+    border: 1px solid rgba(148, 163, 184, 0.55);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.05);
+}
+
+.comparison-title {
+    margin-bottom: 0.85rem;
+}
+
+.comparison-title.negative {
+    color: var(--danger);
+}
+
+.comparison-title.positive {
+    color: var(--accent);
+}
+
+.comparison-list {
+    list-style: none;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.comparison-list li {
+    position: relative;
+    padding-left: 1rem;
+    font-size: 0.98rem;
+    color: var(--muted);
+}
+
+.comparison-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.6rem;
+}
+
+.card {
+    border-radius: var(--radius-md);
+    padding: 1.6rem 1.5rem 1.8rem;
+    background: #ffffff;
+    border: 1px solid rgba(148, 163, 184, 0.55);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.05);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, var(--accent-soft), transparent 55%);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+}
+
+.card-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 0.3rem;
+}
+
