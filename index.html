@@ -361,3 +361,77 @@
                             <span>Región oriental de Honduras.</span>
                         </li>
                     </ul>
+                     <p class="contact-note">
+                        *Puedes personalizar estos datos con la información que el cliente te brinde (dirección,
+                        horarios, etc.).
+                    </p>
+                </div>
+
+                <div class="contact-card reveal reveal-delay-2">
+                    <h3>Envíanos un mensaje</h3>
+                    <p style="font-size:1rem; margin-bottom:0.8rem;">
+                        Esta sección puede conectarse a un formulario real más adelante. De momento funciona como
+                        espacio informativo para el usuario que visite la página.
+                    </p>
+                    <ul class="contact-list">
+                        <li>
+                            <span class="label">¿Qué puedes consultar?</span><br>
+                            <span>
+                                • Procesos de agricultura regenerativa.<br>
+                                • Disponibilidad de productos agroecológicos.<br>
+                                • Posibles alianzas y acuerdos comerciales.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <span>© Agroindustrias Espinoza. Todos los derechos reservados.</span>
+        <span>Enfoque en agricultura regenerativa, agroecología y sistemas productivos sostenibles.</span>
+    </div>
+</footer>
+
+<!-- JS: animaciones scroll + menú móvil -->
+<script>
+    // Animaciones al hacer scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Menú móvil
+    const navToggle = document.querySelector('.nav-toggle');
+    const body = document.body;
+    const navLinks = document.querySelectorAll('.main-nav a');
+
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            body.classList.toggle('nav-open');
+        });
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            body.classList.remove('nav-open');
+        });
+    });
+</script>
+
+</body>
+</html>
