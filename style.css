@@ -86,7 +86,7 @@ img {
 }
 
 .overline {
-    font-size: 0.9rem; /* más grande */
+    font-size: 1.50rem; /* más grande */
     letter-spacing: 0.14em; /* un poco menos para leer mejor */
     text-transform: uppercase;
     font-weight: 600;
@@ -340,8 +340,8 @@ body.nav-open .nav-toggle-lines span:nth-child(3) {
     background:
         linear-gradient(
             180deg,
-            rgba(255, 255, 255, 0.55),
-            rgba(255, 255, 255, 0.55)
+            rgba(255, 255, 255, 0.35),
+            rgba(255, 255, 255, 0.35)
         ),
         url("img/lodgexterior.jpg") center center / cover no-repeat;
 }
@@ -986,4 +986,31 @@ body.nav-open .nav-toggle-lines span:nth-child(3) {
 .hero-footer-row strong {
     font-weight: 700;
     color: #14532d;
+}
+
+/* FONDO CON IMAGEN EN LA SECCIÓN DE COMPARACIÓN */
+#comparacion {
+    position: relative;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.35),
+            rgba(255, 255, 255, 0.35)
+        ),
+        url("img/fondo-finca.jpg") center center / cover no-repeat;
+}
+
+/* Imagen dentro del recuadro de "Enfoque y objetivos" */
+.process-highlight .process-image {
+    margin-top: 1.4rem;      
+    border-radius: 18px;    
+    overflow: hidden;        
+}
+
+.process-highlight .process-image img {
+    display: block;
+    width: 100%;            
+    height: auto;
+    object-fit: cover;       
+    max-height: 260px;    
 }
