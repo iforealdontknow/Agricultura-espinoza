@@ -81,7 +81,7 @@ img {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-     background:
+   
        
 }
 
@@ -343,7 +343,7 @@ body.nav-open .nav-toggle-lines span:nth-child(3) {
             rgba(255, 255, 255, 0.55),
             rgba(255, 255, 255, 0.55)
         ),
-        url("img/fondo-finca.jpg") center center / cover no-repeat;
+        url("img/lodgexterior.jpg") center center / cover no-repeat;
 }
 
 
