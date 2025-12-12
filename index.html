@@ -399,6 +399,25 @@
     </div>
 </footer>
 
+<form action="enviar.php" method="POST" style="margin-top: 1rem;">
+    <input type="text" name="nombre" placeholder="Tu nombre" required
+           style="width:100%; padding:12px; margin-bottom:10px; border-radius:10px; border:1px solid #ccc;">
+  
+    <input type="email" name="correo" placeholder="Tu correo" required
+           style="width:100%; padding:12px; margin-bottom:10px; border-radius:10px; border:1px solid #ccc;">
+  
+    <input type="text" name="telefono" placeholder="Tu teléfono" required
+           style="width:100%; padding:12px; margin-bottom:10px; border-radius:10px; border:1px solid #ccc;">
+  
+    <textarea name="mensaje" placeholder="Escribe tu mensaje" required
+              style="width:100%; padding:12px; margin-bottom:10px; border-radius:10px; border:1px solid #ccc; min-height:120px;"></textarea>
+  
+    <button type="submit" class="btn btn-primary" style="width:100%;">
+      Enviar mensaje
+    </button>
+  </form>
+  
+
 <!-- JS: animaciones scroll + menú móvil -->
 <script>
     // Animaciones al hacer scroll
